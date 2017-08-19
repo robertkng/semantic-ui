@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Input } from 'semantic-ui-react'
+import { Button, Input, Icon } from 'semantic-ui-react'
 import { connect } from 'react-redux'
 import { addTodo } from '../actions'
 
@@ -21,6 +21,12 @@ let AddTodo = ({ dispatch }) => {
         <Button className="TodoButton" basic type='submit'>
           New Todo
         </Button>
+              <Button animated>
+      <Button.Content visible>Next</Button.Content>
+      <Button.Content hidden>
+        <Icon name='right arrow' />
+      </Button.Content>
+    </Button>
       </form>
     </div>
   )

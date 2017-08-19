@@ -6,6 +6,7 @@ const Link = ({ active, children, onClick }) => {
     <Button color={active ? 'blue' : null} active={active} onClick={e => { onClick() }}>
       {children}
     </Button>
+
   )
 }
 
