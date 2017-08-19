@@ -18,16 +18,36 @@ let AddTodo = ({ dispatch }) => {
         input.value = ''
       }}>
         <Input className="TodoText" placeholder='Task...' name='todo' />
-        <Button className="TodoButton" basic type='submit'>
-          New Todo
+        <Button animated className="TodoButton" basic type='submit'>
+          <Button.Content visible>New Todo</Button.Content>
+          <Button.Content hidden>
+          <Icon name='right arrow'/>
+          </Button.Content>
         </Button>
-              <Button animated>
-      <Button.Content visible>Next</Button.Content>
-      <Button.Content hidden>
-        <Icon name='right arrow' />
-      </Button.Content>
-    </Button>
+
       </form>
+        <div>
+    <Button
+      content='Like'
+      icon='heart'
+      label={{ as: 'a', basic: true, content: '2,048' }}
+      labelPosition='right'
+    />
+
+    <Button
+      content='Like'
+      icon='heart'
+      label={{ as: 'a', basic: true, pointing: 'right', content: '2,048' }}
+      labelPosition='left'
+    />
+
+    <Button
+      icon='fork'
+      label={{ as: 'a', basic: true, content: '2,048' }}
+      labelPosition='left'
+    />
+    <Button basic loading>Loading</Button>
+  </div>
     </div>
   )
 }
