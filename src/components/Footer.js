@@ -4,6 +4,7 @@ import FilterLink from '../containers/FilterLink'
 
 const Footer = () => (
   <div>
+
     <label>Show:</label>
     {' '}
     <Button.Group size='mini'>

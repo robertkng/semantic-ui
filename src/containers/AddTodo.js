@@ -1,7 +1,8 @@
 import React from 'react'
-import { Button, Input, Icon } from 'semantic-ui-react'
+import { Button, Header, Image, Input, Icon, Modal } from 'semantic-ui-react'
 import { connect } from 'react-redux'
 import { addTodo } from '../actions'
+import Profile from './profile.jpg'
 
 import './AddTodo.css'
 
@@ -47,6 +48,19 @@ let AddTodo = ({ dispatch }) => {
       labelPosition='left'
     />
     <Button basic loading>Loading</Button>
+
+    <Modal trigger={<Button>Show Modal</Button>}>
+    <Modal.Header>Select a Photo</Modal.Header>
+    <Modal.Content image>
+      <Image wrapped size='medium' src='container/profile.jpg' />
+      <img src={Profile}/>
+      <Modal.Description>
+        <Header>Default Profile Image</Header>
+        <p>Hello, my name is ...</p>
+        <p>Is it okay to use this photo?</p>
+      </Modal.Description>
+    </Modal.Content>
+  </Modal>
   </div>
     </div>
   )
